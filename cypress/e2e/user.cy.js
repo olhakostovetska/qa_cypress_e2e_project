@@ -5,7 +5,7 @@ describe('User', () => {
   let user1, user2;
 
   before(() => {
-    cy.task('db:clear')
+    return cy.task('db:clear')
       .then(() => cy.task('generateUser'))
       .then((u1) => {
         user1 = u1;
